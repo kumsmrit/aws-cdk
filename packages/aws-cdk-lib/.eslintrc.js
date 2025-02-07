@@ -68,5 +68,17 @@ baseConfig.overrides.push({
   rules: { "@cdklabs/no-throw-default-error": ['error'] },
 });
 
+// exceptions for no-throw-default-error
+baseConfig.overrides.push({
+  rules: { "@cdklabs/no-throw-default-error": "off" },
+  files: [
+    // Test files
+    "./**/test/**",
+
+    // Lambda Runtime code in various locations
+    "./custom-resources/lib/provider-framework/runtime/**",
+  ],
+});
+
 
 module.exports = baseConfig;
