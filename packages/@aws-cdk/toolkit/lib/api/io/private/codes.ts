@@ -20,6 +20,7 @@ export const CODES = {
   // 5: Deploy
   CDK_TOOLKIT_I5000: 'Provides deployment times',
   CDK_TOOLKIT_I5001: 'Provides total time in deploy action, including synth and rollback',
+  CDK_TOOLKIT_I5002: 'Provides resoruce mohra',
   CDK_TOOLKIT_I5031: 'Informs about any log groups that are traced as part of the deployment',
   CDK_TOOLKIT_I5050: 'Confirm rollback during deployment',
   CDK_TOOLKIT_I5060: 'Confirm deploy security sensitive changes',
