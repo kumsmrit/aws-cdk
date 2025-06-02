@@ -32,6 +32,12 @@ export class FeatureFlags {
       }
       return true;
     }
-    return context !== undefined ? Boolean(context) : cxapi.futureFlagDefault(featureFlag);
+    if (context === undefined) {
+      return cxapi.futureFlagDefault(featureFlag);
+    }
+    if (typeof context === 'string') {
+      return context.trim().toLowerCase() === 'true';
+    }
+    return Boolean(context);
   }
 }
